@@ -1,0 +1,558 @@
+/* ==========================================================================
+   Thrive Africa Initiative — Design tokens
+   Palette drawn from the TAI mark (cupped hands + sprouting leaf) and the
+   real field photography: savanna gold, rain-soaked laterite, overcast sky.
+   Typography: system stacks only — no webfont requests, by design, for
+   visitors on slow or unreliable connections.
+   ========================================================================== */
+
+:root {
+  --canopy: #1F5C3F;      /* primary — deep growth green */
+  --canopy-dark: #163F2B; /* pressed / hover state */
+  --ink: #16261C;         /* near-black forest charcoal, body text */
+  --sprout: #7CB342;      /* fresh leaf accent — used sparingly */
+  --clay: #9C5A34;        /* laterite soil — warmth, grounding */
+  --clay-light: #E8D9CC;  /* pale clay tint for subtle backgrounds */
+  --mist: #F6F7F2;        /* warm off-white background */
+  --mist-deep: #ECEEE6;   /* slightly deeper section background */
+  --paper: #FFFFFF;
+  --line: #DCE0D6;        /* hairline borders */
+
+  --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+
+  --radius: 6px;
+  --max-width: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--mist);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--canopy);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--clay);
+  outline-offset: 2px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  color: var(--canopy-dark);
+}
+
+h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); font-style: italic; font-weight: 500; }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 var(--space-2); }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: var(--space-1);
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: inherit;
+}
+.brand:hover { text-decoration: none; }
+
+.brand img { height: 40px; width: auto; }
+
+.brand-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--canopy-dark);
+  line-height: 1.1;
+}
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+}
+
+nav.main-nav a {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+nav.main-nav a:hover,
+nav.main-nav a[aria-current="page"],
+nav.main-nav a.active {
+  color: var(--canopy);
+  text-decoration: none;
+  border-bottom: 2px solid var(--sprout);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.7rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav-donate-item { display: flex; align-items: center; }
+.nav-donate {
+  display: inline-block;
+  background: var(--clay);
+  color: var(--paper) !important;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border-bottom: none !important;
+}
+.nav-donate:hover { background: #7E4A2A; text-decoration: none; }
+
+@media (max-width: 780px) {
+  .nav-toggle { display: inline-flex; }
+  nav.main-nav {
+    display: none;
+    width: 100%;
+  }
+  nav.main-nav.open { display: block; }
+  .site-header .container { flex-wrap: wrap; }
+  nav.main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--line);
+    margin-top: var(--space-2);
+  }
+  nav.main-nav a {
+    display: block;
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--line);
+  }
+  nav.main-nav a.nav-donate {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    margin-top: var(--space-1);
+  }
+  .nav-donate-item { border-top: none; }
+}
+
+/* ---------- Hero (signature cupped-arch shape) ---------- */
+.hero {
+  position: relative;
+  background: var(--canopy-dark);
+  color: var(--mist);
+  overflow: hidden;
+  padding: 0; /* spacing is controlled entirely by .hero .container below —
+                 without this override, the generic `section` rule further
+                 down stacks its own padding on top and doubles hero height */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .hero .container { grid-template-columns: 1fr; padding-top: var(--space-5); padding-bottom: var(--space-5); }
+}
+
+.hero h1 { color: var(--paper); margin-bottom: var(--space-3); }
+.hero p.lede { font-size: 1.15rem; max-width: 42ch; color: var(--clay-light); margin-bottom: var(--space-3); }
+
+.hero-figure {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.hero-figure img { width: 100%; height: 100%; object-fit: cover; }
+
+/* the cupped-arch divider: an abstraction of the logo's hands motif,
+   used once here to hand off from hero into the page body */
+.cupped-divider {
+  display: block;
+  width: 100%;
+  height: 60px;
+  margin-top: calc(var(--space-6) * -1);
+}
+@media (max-width: 860px) {
+  .cupped-divider { margin-top: calc(var(--space-5) * -1); height: 40px; }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.btn:hover { text-decoration: none; }
+
+.btn-primary {
+  background: var(--sprout);
+  color: var(--canopy-dark);
+}
+.btn-primary:hover { background: #6BA033; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--mist);
+  border-color: rgba(246, 247, 242, 0.55);
+}
+.btn-outline:hover { border-color: var(--mist); background: rgba(246, 247, 242, 0.08); }
+
+.btn-row { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+/* ---------- Sections ---------- */
+section { padding: var(--space-5) 0; }
+section.tight { padding: var(--space-4) 0; }
+section.alt { background: var(--mist-deep); }
+section.dark { background: var(--canopy-dark); color: var(--mist); }
+section.dark h2 { color: var(--paper); }
+
+.section-head { max-width: 62ch; margin-bottom: var(--space-4); }
+
+/* ---------- Program cards (cupped-bottom shape echoes the mark) ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+@media (max-width: 860px) {
+  .card-grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.card h3 { margin-bottom: 0.25rem; }
+.card p { color: #3B4A3F; font-size: 0.97rem; margin-bottom: 0; }
+
+/* .tag is standalone so it works both inside cards and on its own
+   (e.g. the Programs page section headers use it outside a .card) */
+.tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--canopy);
+  background: #E7EFE7;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: var(--space-1);
+}
+.tag.clay-tag { color: var(--clay); background: #F3E7DB; }
+
+.card.pending {
+  background: var(--clay-light);
+  border-color: #D9C4B0;
+}
+.card.pending .tag { color: var(--clay); background: #F3E7DB; }
+
+/* ---------- Photo grid / gallery ---------- */
+.photo-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+.photo-row img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+@media (max-width: 780px) {
+  .photo-row { grid-template-columns: 1fr; }
+  .photo-row img { height: auto; aspect-ratio: 4/3; }
+}
+
+/* ---------- Photo caption (documentary style, not decorative) ---------- */
+figure.field-photo { margin: 0; }
+figure.field-photo img { border-radius: 6px; width: 100%; object-fit: cover; }
+figure.field-photo figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #55625A;
+  font-style: italic;
+}
+
+/* ---------- Editorial split section (image + text, alternating) ---------- */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+.split.reverse .split-media { order: 2; }
+.split.reverse .split-text { order: 1; }
+@media (max-width: 860px) {
+  .split { grid-template-columns: 1fr; }
+  .split.reverse .split-media,
+  .split.reverse .split-text { order: initial; }
+}
+.split-media img { border-radius: 6px; width: 100%; object-fit: cover; aspect-ratio: 4/3; }
+.split-text p { max-width: 52ch; }
+.split-text ul { max-width: 52ch; padding-left: 1.2rem; color: #2B3B30; margin: 0 0 var(--space-2); }
+.split-text ul li { margin-bottom: 0.4rem; }
+
+/* ---------- At-a-glance strip (restrained, factual, no fake counters) ---------- */
+/* ---------- At-a-glance strip (restrained, factual, no fake counters) ---------- */
+.glance-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+@media (max-width: 780px) {
+  .glance-strip { grid-template-columns: repeat(2, 1fr); }
+}
+.glance-item {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--canopy-dark);
+  text-align: center;
+  padding: var(--space-3) var(--space-2);
+  border-left: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glance-item:first-child { border-left: none; }
+@media (max-width: 780px) {
+  .glance-item:nth-child(2) { border-left: none; }
+  .glance-item:nth-child(3) { border-left: none; border-top: 1px solid var(--line); }
+  .glance-item:nth-child(4) { border-top: 1px solid var(--line); }
+}
+
+/* ---------- ProtectionSphere feature (visually distinct from program cards) ---------- */
+.innovation-feature {
+  background: var(--canopy-dark);
+  color: var(--mist);
+  border-radius: 6px;
+  padding: var(--space-4);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .innovation-feature { grid-template-columns: 1fr; padding: var(--space-3); }
+}
+.innovation-feature h2 { color: var(--paper); }
+.innovation-feature p { color: #D9E4D2; max-width: 50ch; }
+.innovation-visual {
+  border: 1px solid rgba(246,247,242,0.25);
+  border-radius: 6px;
+  padding: var(--space-3);
+  background: rgba(246,247,242,0.06);
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--clay-light);
+  text-align: center;
+}
+
+/* ---------- Values list ---------- */
+.value-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2); }
+.value-list li {
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--sprout);
+}
+.value-list strong { color: var(--canopy-dark); display: block; font-family: var(--font-display); font-size: 1.05rem; }
+
+/* ---------- Info blocks (contact, leadership) ---------- */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+@media (max-width: 780px) {
+  .info-grid { grid-template-columns: 1fr; }
+}
+
+.contact-list { list-style: none; padding: 0; margin: 0; }
+.contact-list li { padding: var(--space-2) 0; border-bottom: 1px solid var(--line); }
+.contact-list span { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clay); margin-bottom: 0.2rem; }
+
+/* ---------- Form ---------- */
+.form-field { margin-bottom: var(--space-2); }
+.form-field label { display: block; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.35rem; }
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--paper);
+}
+.form-field textarea { min-height: 140px; resize: vertical; }
+.form-note { font-size: 0.85rem; color: #55625A; margin-top: var(--space-2); }
+
+/* ---------- Notice / callout boxes ---------- */
+.notice {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+.notice.clay { border-color: #D9C4B0; background: var(--clay-light); }
+
+#support { scroll-margin-top: 80px; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--ink);
+  color: #C7D0C9;
+  padding: var(--space-5) 0 var(--space-3);
+  font-size: 0.92rem;
+}
+.site-footer a { color: #E7EFE7; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+@media (max-width: 780px) {
+  .footer-grid { grid-template-columns: 1fr; gap: var(--space-3); }
+}
+.footer-grid h4 { color: var(--paper); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; font-family: var(--font-body); }
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-grid li { margin-bottom: 0.5rem; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: var(--space-3);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  font-size: 0.82rem;
+  color: #8FA090;
+}
+
+/* ---------- Reveal-on-scroll (subtle, single-purpose) ----------
+   Progressive enhancement: content is fully visible by default.
+   JS only *adds* the hidden starting state ("armed") right before it
+   starts observing, so if JS is slow, blocked, or fails outright,
+   visitors still see all content immediately — nothing depends on
+   script success to be readable. This matters on unreliable connections. */
+.reveal.reveal-armed {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.reveal-armed.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Page hero (secondary pages) ---------- */
+.page-hero {
+  background: var(--canopy-dark);
+  color: var(--mist);
+  padding: var(--space-5) 0;
+}
+.page-hero h1 { color: var(--paper); margin-bottom: var(--space-1); }
+.page-hero p { color: var(--clay-light); max-width: 56ch; margin-bottom: 0; }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--canopy);
+  color: var(--paper);
+  padding: 0.75rem 1rem;
+  z-index: 100;
+}
+.skip-link:focus { left: var(--space-2); top: var(--space-2); }
