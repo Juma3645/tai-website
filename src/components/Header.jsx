@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { NavLink, Link } from 'react-router-dom'
-import logo from '../assets/images/tai-logo-icon.png'
+import { useEffect, useState } from 'react'
+import { NavLink, Link, useLocation } from 'react-router-dom'
+import logo from '../assets/images/tai-logo-wordmark.png'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Home', end: true },
@@ -11,36 +11,36 @@ const NAV_ITEMS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => setOpen(false), [location.pathname, location.hash])
 
   return (
     <header className="site-header">
-      <div className="container">
-        <Link className="brand" to="/" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Thrive Africa Initiative logo" />
-          <span className="brand-text">
-            Thrive Africa
-            <br />
-            Initiative
-          </span>
+      <div className="container header-inner">
+        <Link className="brand" to="/" aria-label="Thrive Africa Initiative home">
+          <img src={logo} alt="Thrive Africa Initiative" />
         </Link>
 
         <button
           className="nav-toggle"
+          type="button"
           aria-expanded={open}
-          aria-label="Toggle menu"
-          onClick={() => setOpen((v) => !v)}
+          aria-controls="primary-navigation"
+          aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
+          onClick={() => setOpen((value) => !value)}
         >
-          ☰ Menu
+          <span className="nav-toggle-lines" aria-hidden="true"><i /><i /><i /></span>
+          <span>{open ? 'Close' : 'Menu'}</span>
         </button>
 
-        <nav className={'main-nav' + (open ? ' open' : '')} aria-label="Primary">
+        <nav id="primary-navigation" className={`main-nav${open ? ' open' : ''}`} aria-label="Primary navigation">
           <ul>
             {NAV_ITEMS.map((item) => (
               <li key={item.to}>
                 <NavLink
                   to={item.to}
                   end={item.end}
-                  onClick={() => setOpen(false)}
                   className={({ isActive }) => (isActive ? 'active' : undefined)}
                 >
                   {item.label}
@@ -48,9 +48,7 @@ export default function Header() {
               </li>
             ))}
             <li className="nav-donate-item">
-              <Link className="nav-donate" to="/contact#support" onClick={() => setOpen(false)}>
-                Donate
-              </Link>
+              <Link className="nav-donate" to="/contact#support">Support our work</Link>
             </li>
           </ul>
         </nav>

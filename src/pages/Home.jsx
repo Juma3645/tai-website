@@ -4,7 +4,33 @@ import usePageTitle from '../hooks/usePageTitle.js'
 import heroImg from '../assets/images/gender-sensitivity-poc-akoka.jpg'
 import protectionImg from '../assets/images/maiwut-banner-notebooks.jpg'
 import livelihoodsImg from '../assets/images/livelihoods-cornfield.jpg'
-import classroomImg from '../assets/images/shelter-family-under-tree.jpg'
+import shelterImg from '../assets/images/shelter-family-under-tree.jpg'
+import fieldImg from '../assets/images/community-gathering-wide.jpg'
+import womenImg from '../assets/images/akoka-women-poc-banner.jpg'
+
+const programmes = [
+  {
+    number: '01',
+    title: 'Protection & GBV',
+    text: 'Community-based protection, GBV prevention and response, referrals, gender-sensitive civic education, and local capacity strengthening.',
+    image: protectionImg,
+    alt: 'Community elders with a protection banner in Maiwut County',
+  },
+  {
+    number: '02',
+    title: 'Livelihoods',
+    text: 'Women-led farming and income-generating activities that strengthen food security, household resilience, and economic independence.',
+    image: livelihoodsImg,
+    alt: 'Agricultural field supporting livelihoods programming',
+  },
+  {
+    number: '03',
+    title: 'Shelter & NFIs',
+    text: 'Support for returnee and displaced families with essential shelter assistance and household items, linked to protection needs.',
+    image: shelterImg,
+    alt: 'Family and household context relevant to shelter and NFI support',
+  },
+]
 
 export default function Home() {
   usePageTitle('Thrive Africa Initiative | South Sudan')
@@ -12,154 +38,158 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
-        <div className="container">
-          <div>
-            <span className="eyebrow" style={{ color: '#B7D6A8' }}>South Sudan</span>
+        <div className="hero-shape" aria-hidden="true" />
+        <div className="container hero-inner">
+          <div className="hero-copy">
+            <span className="eyebrow light">South Sudan · Community-led action</span>
             <h1>Where women lead, communities rise.</h1>
-            <p className="lede">
-              Thrive Africa Initiative (TAI) is a women-led national NGO working with
-              vulnerable and conflict-affected communities in South Sudan. Our work focuses
-              on protection, gender-based violence prevention and response, livelihoods, and
-              shelter and non-food item assistance.
+            <p className="hero-lede">
+              Thrive Africa Initiative is a women-led South Sudanese NGO working with women,
+              returnees and vulnerable communities to strengthen protection, livelihoods and resilience.
             </p>
             <div className="btn-row">
-              <Link className="btn btn-primary" to="/programs">Our Programmes</Link>
-              <Link className="btn btn-outline" to="/contact">Get in Touch</Link>
+              <Link className="btn btn-primary" to="/programs">Explore our work</Link>
+              <Link className="btn btn-light-outline" to="/contact">Work with TAI</Link>
             </div>
+            <p className="hero-note">Registered National NGO · Relief and Rehabilitation Commission (RRC), South Sudan</p>
           </div>
-          <div className="hero-figure">
-            <img
-              src={heroImg}
-              alt="Thrive Africa Initiative team and community members in Akoka County with a UNMISS-supported protection banner"
-            />
-          </div>
+          <figure className="hero-figure">
+            <img src={heroImg} alt="TAI team and community members during protection work in Akoka County" />
+            <figcaption>Akoka County, Upper Nile State</figcaption>
+          </figure>
         </div>
       </section>
 
-      <Reveal as="section">
-        <div className="container" style={{ maxWidth: '74ch' }}>
-          <span className="eyebrow">Who we are</span>
-          <h2>Working with communities across South Sudan</h2>
-          <p style={{ fontSize: '1.1rem', color: '#2B3B30' }}>
-            TAI is a women-constituent-led organization formed by indigenous women in South
-            Sudan. We work with returnees, indigenous women, and vulnerable communities to
-            strengthen protection, gender equality, and household resilience — grounded in
-            community ownership and led at every level by the women closest to the work.
-          </p>
+      <Reveal as="section" className="intro-section">
+        <div className="container intro-grid">
+          <div>
+            <span className="eyebrow">Who we are</span>
+            <h2>Local leadership. Practical action. Dignity first.</h2>
+          </div>
+          <div>
+            <p className="intro-lede">
+              Thrive Africa Initiative (TAI) works alongside communities affected by conflict,
+              displacement and vulnerability. Our approach is grounded in local leadership,
+              women’s participation and solutions shaped by the people closest to the work.
+            </p>
+            <Link className="text-link" to="/about">Learn more about TAI <span aria-hidden="true">→</span></Link>
+          </div>
         </div>
       </Reveal>
 
-      <Reveal as="section" className="alt tight">
+      <Reveal as="section" className="facts-section">
         <div className="container">
-          <div className="section-head" style={{ marginBottom: 'var(--space-2)' }}>
-            <span className="eyebrow">TAI at a glance</span>
-          </div>
-          <div className="glance-strip">
-            <div className="glance-item">Women-led<br />national NGO</div>
-            <div className="glance-item">Protection · GBV<br />Livelihoods · Shelter &amp; NFIs</div>
-            <div className="glance-item">Community-based<br />programming</div>
-            <div className="glance-item">Registered NGO<br />RRC, South Sudan</div>
+          <div className="facts-grid">
+            <div className="fact"><strong>Women-led</strong><span>National NGO</span></div>
+            <div className="fact"><strong>3</strong><span>Connected programme areas</span></div>
+            <div className="fact"><strong>Upper Nile</strong><span>Field coordination and programming</span></div>
+            <div className="fact"><strong>Community</strong><span>Led and locally grounded</span></div>
           </div>
         </div>
       </Reveal>
 
       <Reveal as="section">
         <div className="container">
-          <div className="section-head">
-            <span className="eyebrow">What we do</span>
-            <h2>Our programmes</h2>
+          <div className="section-intro">
+            <div>
+              <span className="eyebrow">What we do</span>
+              <h2>Three connected areas of work</h2>
+            </div>
+            <p>Our programmes respond to immediate protection needs while supporting households and communities to rebuild with dignity.</p>
           </div>
 
-          <div className="split" style={{ marginBottom: 'var(--space-4)' }}>
-            <div className="split-media">
-              <img src={protectionImg} alt="Community elders with TAI and UNMISS protection banner, Maiwut County" />
-            </div>
-            <div className="split-text">
-              <span className="tag">Active</span>
-              <h3>Protection &amp; Gender-Based Violence</h3>
-              <p>
-                Community-based protection, GBV prevention and response, referral pathways,
-                and gender-sensitive civic education — supporting safer environments in Akoka
-                and Maiwut counties, including improved school safety for girls.
-              </p>
-            </div>
+          <div className="programme-grid">
+            {programmes.map((programme) => (
+              <article className="programme-card" key={programme.number}>
+                <div className="programme-image">
+                  <img src={programme.image} alt={programme.alt} loading="lazy" />
+                </div>
+                <div className="programme-body">
+                  <span className="programme-number">{programme.number}</span>
+                  <h3>{programme.title}</h3>
+                  <p>{programme.text}</p>
+                  <Link className="text-link" to="/programs">View programme <span aria-hidden="true">→</span></Link>
+                </div>
+              </article>
+            ))}
           </div>
-
-          <div className="split reverse" style={{ marginBottom: 'var(--space-4)' }}>
-            <div className="split-media">
-              <img src={livelihoodsImg} alt="Community water point supporting household resilience, Upper Nile State" />
-            </div>
-            <div className="split-text">
-              <span className="tag">Active</span>
-              <h3>Livelihoods</h3>
-              <p>
-                Women-led farming cooperatives and income-generating activities that build
-                household food security and economic independence, integrated with GBV risk
-                mitigation.
-              </p>
-            </div>
-          </div>
-
-          <div className="split">
-            <div className="split-media">
-              <img src={classroomImg} alt="Outdoor learning session supporting safer access to education for girls" />
-            </div>
-            <div className="split-text">
-              <span className="tag">Active</span>
-              <h3>Shelter &amp; Non-Food Items (NFIs)</h3>
-              <p>
-                Supporting returnee and displaced families with shelter assistance and
-                essential household items, alongside our protection and livelihoods work.
-              </p>
-            </div>
-          </div>
-
-          <p style={{ marginTop: 'var(--space-4)' }}>
-            <Link to="/programs">Read more about our programmes →</Link>
-          </p>
         </div>
       </Reveal>
 
-      <Reveal as="section" className="alt">
+      <Reveal as="section" className="story-section">
+        <div className="container story-grid">
+          <div className="story-images">
+            <img className="story-main" src={fieldImg} alt="Community engagement activity supported by TAI" loading="lazy" />
+            <img className="story-small" src={womenImg} alt="Women participating in protection programming in Akoka County" loading="lazy" />
+          </div>
+          <div className="story-copy">
+            <span className="eyebrow">On the ground</span>
+            <h2>Building local capacity for safer communities</h2>
+            <p>
+              In Akoka County, TAI has worked with Community Protection Committees, local
+              authorities and communities to strengthen protection awareness, gender sensitivity,
+              civic participation and referral pathways.
+            </p>
+            <p>
+              The work reflects our wider approach: build local capacity, listen to communities,
+              and connect protection with the everyday conditions that help people recover.
+            </p>
+            <Link className="btn btn-secondary" to="/programs">See our field work</Link>
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal as="section" className="innovation-section">
         <div className="container">
           <div className="innovation-feature">
-            <div>
-              <span className="eyebrow" style={{ color: '#B7D6A8' }}>Innovation</span>
-              <h2>Innovation for safer protection programming</h2>
-              <p>
-                TAI is developing ProtectionSphere, a secure digital platform designed to
-                strengthen protection and GBV case management, referrals, information
-                management, and programme reporting. It began as an internal response to
-                TAI's own paper-based case records, and is now being incubated as a related,
-                separately branded initiative.
+            <div className="innovation-copy">
+              <span className="eyebrow light">TAI innovation</span>
+              <h2>ProtectionSphere</h2>
+              <p className="innovation-lede">
+                TAI is developing ProtectionSphere, a digital platform designed to strengthen
+                protection and GBV case management, referrals, information management and reporting.
               </p>
+              <p>
+                It grew from a practical need inside humanitarian work: protecting sensitive case
+                information while making follow-up and programme management more consistent.
+              </p>
+              <a className="btn btn-primary" href="https://protectionsphere.org" target="_blank" rel="noopener noreferrer">
+                Visit ProtectionSphere
+              </a>
             </div>
-            <div className="innovation-visual">ProtectionSphere</div>
+            <div className="innovation-panel" aria-label="ProtectionSphere digital innovation">
+              <span>Digital protection</span>
+              <strong>Built from field experience.</strong>
+              <small>Separate product · TAI innovation</small>
+            </div>
           </div>
         </div>
       </Reveal>
 
       <Reveal as="section">
-        <div className="container">
-          <div className="section-head">
-            <span className="eyebrow">On the ground</span>
-            <h2>Where we work</h2>
+        <div className="container locations-section">
+          <div>
+            <span className="eyebrow">Where we work</span>
+            <h2>Juba and field locations in Upper Nile</h2>
           </div>
-          <p style={{ maxWidth: '60ch' }}>
-            Main office in Juba, with field coordination across Upper Nile State — including
-            Akoka, Maiwut, and Renk counties — and Malakal.
-          </p>
+          <div className="locations-copy">
+            <p>
+              TAI’s main office is in Juba, with field coordination and programme experience in
+              Akoka, Maiwut, Renk and Malakal.
+            </p>
+            <div className="location-list" aria-label="TAI locations">
+              <span>Juba</span><span>Akoka</span><span>Maiwut</span><span>Renk</span><span>Malakal</span>
+            </div>
+          </div>
         </div>
       </Reveal>
 
-      <Reveal as="section" className="dark">
-        <div className="container" style={{ textAlign: 'center' }}>
-          <h2>Want to partner, support, or learn more?</h2>
-          <p style={{ color: '#D9E4D2', maxWidth: '50ch', margin: '0 auto var(--space-3)' }}>
-            We'd love to hear from you — whether you're a community member, a donor, or a
-            fellow organization.
-          </p>
-          <Link className="btn btn-primary" to="/contact">Contact Us</Link>
+      <Reveal as="section" className="cta-section">
+        <div className="container cta-inner">
+          <span className="eyebrow light">Partner with us</span>
+          <h2>Let’s build practical solutions with communities.</h2>
+          <p>For partnerships, programme enquiries, support or collaboration, get in touch with the TAI team.</p>
+          <Link className="btn btn-primary" to="/contact">Contact TAI</Link>
         </div>
       </Reveal>
     </main>
