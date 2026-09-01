@@ -6,8 +6,13 @@ const NAV_ITEMS = [
   { to: '/', label: 'Home', end: true },
   { to: '/about', label: 'About' },
   { to: '/programs', label: 'Programmes' },
+  { to: '/news', label: 'News' },
   { to: '/contact', label: 'Contact' },
 ]
+
+function goHome() {
+  window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+}
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -18,7 +23,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link className="brand" to="/" aria-label="Thrive Africa Initiative home">
+        <Link className="brand" to="/" aria-label="Thrive Africa Initiative home" onClick={goHome}>
           <img src={logo} alt="Thrive Africa Initiative" />
         </Link>
 
@@ -40,6 +45,7 @@ export default function Header() {
               <li key={item.to}>
                 <NavLink
                   to={item.to}
+                  onClick={item.to === '/' ? goHome : undefined}
                   end={item.end}
                   className={({ isActive }) => (isActive ? 'active' : undefined)}
                 >

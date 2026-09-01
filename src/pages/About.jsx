@@ -121,8 +121,8 @@ export default function About() {
 
       <Reveal as="section">
         <div className="container locations-section">
-          <div><span className="eyebrow">Where we work</span><h2>Juba, Akoka, Maiwut, Renk and Malakal</h2></div>
-          <p>Main office in Juba, with field coordination and programme experience across Upper Nile State and Malakal.</p>
+          <div><span className="eyebrow">Field presence</span><h2>Our field presence</h2></div>
+          <p>TAI’s main office is in Juba, with field coordination and programme experience in Akoka, Maiwut, Renk and Malakal.</p>
         </div>
       </Reveal>
 

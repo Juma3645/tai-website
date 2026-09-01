@@ -56,3 +56,8 @@ component-based workflow. For the actual live site on slow South Sudan
 connections, the plain HTML/CSS/JS version I built first is still my
 recommendation — this one is here because you asked for the same process as
 ProtectionSphere.
+
+
+## Contact form
+
+The contact form uses Web3Forms. Keep the existing Web3Forms access key out of Git and configure it as `VITE_WEB3FORMS_ACCESS_KEY` in your local `.env` file and in Vercel Project Settings → Environment Variables.

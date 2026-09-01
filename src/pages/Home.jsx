@@ -44,8 +44,8 @@ export default function Home() {
             <span className="eyebrow light">South Sudan · Community-led action</span>
             <h1>Where women lead, communities rise.</h1>
             <p className="hero-lede">
-              Thrive Africa Initiative is a women-led South Sudanese NGO working with women,
-              returnees and vulnerable communities to strengthen protection, livelihoods and resilience.
+              Thrive Africa Initiative is a women-led NGO working with women, returnees and vulnerable communities
+              to strengthen protection, livelihoods and resilience.
             </p>
             <div className="btn-row">
               <Link className="btn btn-primary" to="/programs">Explore our work</Link>
@@ -126,9 +126,9 @@ export default function Home() {
             <span className="eyebrow">On the ground</span>
             <h2>Building local capacity for safer communities</h2>
             <p>
-              In Akoka County, TAI has worked with Community Protection Committees, local
-              authorities and communities to strengthen protection awareness, gender sensitivity,
-              civic participation and referral pathways.
+              In Akoka County, TAI formed and trained Community Protection Committees with strong women’s
+              representation, working with local authorities and communities to strengthen protection
+              awareness, gender sensitivity, civic participation and referral pathways.
             </p>
             <p>
               The work reflects our wider approach: build local capacity, listen to communities,
@@ -166,15 +166,35 @@ export default function Home() {
         </div>
       </Reveal>
 
+      <Reveal as="section" className="news-home-section">
+        <div className="container">
+          <div className="section-intro">
+            <div><span className="eyebrow">News &amp; updates</span><h2>From the field and the wider humanitarian context</h2></div>
+            <p>Selected updates on TAI’s work, community protection and the realities shaping humanitarian response.</p>
+          </div>
+          <div className="news-home-grid">
+            <article className="news-home-feature">
+              <img src={protectionImg} alt="Women participating in a TAI-supported protection activity in Akoka County" loading="lazy" />
+              <div><span className="news-label">TAI field update</span><h3>Strengthening community protection in Akoka County</h3><p>TAI formed and trained Community Protection Committees with strong women’s representation and a focus on locally led protection.</p><Link className="text-link" to="/news/strengthening-community-protection-in-akoka">Read the update <span aria-hidden="true">→</span></Link></div>
+            </article>
+            <div className="news-home-list">
+              <article><span className="news-label">Humanitarian context · 3 Oct 2025</span><h3>Flooding adds pressure to communities and humanitarian access</h3><Link className="text-link" to="/news/flooding-and-humanitarian-access-october-2025">Read update <span aria-hidden="true">→</span></Link></article>
+              <article><span className="news-label">Upper Nile update · 28 Oct 2025</span><h3>Upper Nile: coordination remains critical as flooding affects communities</h3><Link className="text-link" to="/news/upper-nile-flooding-needs-assessment-october-2025">Read update <span aria-hidden="true">→</span></Link></article>
+            </div>
+          </div>
+          <Link className="btn btn-secondary news-home-button" to="/news">See all news &amp; updates</Link>
+        </div>
+      </Reveal>
+
       <Reveal as="section">
         <div className="container locations-section">
           <div>
             <span className="eyebrow">Where we work</span>
-            <h2>Juba and field locations in Upper Nile</h2>
+            <h2>Our field presence</h2>
           </div>
           <div className="locations-copy">
             <p>
-              TAI’s main office is in Juba, with field coordination and programme experience in
+              TAI’s main office is in Juba, with field coordination and programme experience across
               Akoka, Maiwut, Renk and Malakal.
             </p>
             <div className="location-list" aria-label="TAI locations">
