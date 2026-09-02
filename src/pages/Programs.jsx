@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
 import usePageTitle from '../hooks/usePageTitle.js'
 import bannerGroupImg from '../assets/images/poc-akoka-banner-group.jpg'
-import eldersImg from '../assets/images/maiwut-banner-elders.jpg'
-import maiwutOfficialsImg from '../assets/images/maiwut-banner-officials.jpg'
-import womenBannerImg from '../assets/images/akoka-women-poc-banner.jpg'
+import maiwutCommunityImg from '../assets/images/maiwut-community-banner.jpg'
+import maiwutEngagementImg from '../assets/images/maiwut-community-engagement.jpg'
 import cornfieldImg from '../assets/images/livelihoods-cornfield.jpg'
 import trainingImg from '../assets/images/gender-sensitivity-poc-akoka.jpg'
 import familyImg from '../assets/images/shelter-family-under-tree.jpg'
@@ -26,7 +25,7 @@ export default function Programs() {
         <div className="container programme-detail">
           <div className="detail-media"><img src={bannerGroupImg} alt="Community protection session in Akoka County with UNMISS-supported banner" /></div>
           <div className="detail-copy">
-            <span className="tag">Active programme</span>
+            <span className="tag">Programme area</span>
             <span className="eyebrow">01 · Protection</span>
             <h2>Protection &amp; Gender-Based Violence</h2>
             <p>TAI works directly with communities to prevent and respond to protection risks and gender-based violence, particularly for women and girls affected by conflict and displacement.</p>
@@ -40,8 +39,8 @@ export default function Programs() {
           </div>
         </div>
         <div className="container photo-row programme-gallery">
-          <figure className="field-photo"><img src={maiwutOfficialsImg} alt="Local officials and community representatives during a TAI-supported activity in Maiwut County" loading="lazy" /><figcaption>Maiwut County · local capacity strengthening</figcaption></figure>
-          <figure className="field-photo"><img src={eldersImg} alt="Community representatives participating in a TAI activity in Maiwut County" loading="lazy" /><figcaption>Maiwut County · community engagement</figcaption></figure>
+          <figure className="field-photo"><img src={maiwutCommunityImg} alt="TAI and UNMISS-supported community activity in Maiwut County" loading="lazy" /><figcaption>Maiwut County · local capacity strengthening</figcaption></figure>
+          <figure className="field-photo"><img src={maiwutEngagementImg} alt="Community members participating in a TAI-supported discussion in Maiwut County" loading="lazy" /><figcaption>Maiwut County · community engagement</figcaption></figure>
           <figure className="field-photo"><img src={trainingImg} alt="Participants at a gender-sensitivity and protection activity in Akoka County" loading="lazy" /><figcaption>Akoka County · gender sensitivity and protection</figcaption></figure>
         </div>
       </Reveal>
@@ -50,7 +49,7 @@ export default function Programs() {
         <div className="container programme-detail reverse-detail">
           <div className="detail-media"><img src={cornfieldImg} alt="Agricultural field supporting livelihoods programming" /></div>
           <div className="detail-copy">
-            <span className="tag">Active programme</span>
+            <span className="tag">Programme area</span>
             <span className="eyebrow">02 · Livelihoods</span>
             <h2>Livelihoods</h2>
             <p>TAI supports women-led farming cooperatives and income-generating activities that build household food security and economic independence.</p>
@@ -64,7 +63,7 @@ export default function Programs() {
         <div className="container programme-detail">
           <div className="detail-media"><img src={familyImg} alt="Household context for shelter and NFI support" /></div>
           <div className="detail-copy">
-            <span className="tag">Active programme</span>
+            <span className="tag">Programme area</span>
             <span className="eyebrow">03 · Humanitarian support</span>
             <h2>Shelter &amp; Non-Food Items (NFIs)</h2>
             <p>TAI supports returnee and displaced families with shelter assistance and essential household items, alongside protection and livelihoods work. In Maiwut, field activities have included households living with significant shelter needs.</p>

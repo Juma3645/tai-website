@@ -57,4 +57,6 @@ recommendation — this one is here because you asked for the same process as
 ProtectionSphere.
 
 - Added 2 September 2026 Akoka drought field update and refreshed homepage latest-news feature.
+- Refreshed the Programmes page with dedicated Maiwut community/capacity-strengthening photography and clearer programme-area labels.
+- Replaced the September 2025 Akoka return/reintegration article image with the unused wide Community and CPC Engagement photograph for a better landscape presentation.
 - Fixed the transparent footer logo treatment and added a keyboard-accessible skip link and 404 route.

@@ -37,7 +37,7 @@ export default function News() {
       <section className="alt news-note">
         <div className="container news-note-inner">
           <div><span className="eyebrow">Editorial standard</span><h2>Clear, factual and grounded in the field.</h2></div>
-          <p>News published here should distinguish TAI’s own activities from wider humanitarian context. External reports are credited, and names or quotations are only used when they can be verified.</p>
+          <p>News published here distinguishes TAI’s own activities from wider humanitarian context. External reports are credited, and names or quotations are only used when they can be verified.</p>
         </div>
       </section>
     </main>

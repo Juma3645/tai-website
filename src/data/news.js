@@ -1,10 +1,10 @@
 import droughtAkokaImg from '../assets/News/Drought affected farm in Akoka (1).jpg'
-import akokaFocusImg from '../assets/News/Focused group discussion, Akoka HQ.jpg'
+import akokaCommunityImg from '../assets/News/Community and CPC Engagement.jpg'
 import cpcAkokaImg from '../assets/News/CPC Representatives, Achony Payam, Akoka County.jpg'
 import akokaCpcImg from '../assets/News/CPC in Bienthiang, Akoka County.jpg'
 import maiwutOfficialsImg from '../assets/images/maiwut-banner-officials.jpg'
 import maiwutTrainingImg from '../assets/images/maiwut-banner-notebooks.jpg'
-import maiwutEldersImg from '../assets/images/maiwut-banner-elders.jpg'
+import maiwutGenderSenstivityImg from '../assets/images/maiwut-banner-officials.jpg'
 
 export const newsItems = [
   {
@@ -30,7 +30,7 @@ export const newsItems = [
   // ...
 
     body: [
-      'A recent field image from "Bienythiang one of Akoka County’s six payams" shows the effects of drought on farmland and crops. The conditions are affecting agricultural production and adding pressure to communities already facing humanitarian needs.',
+      'A recent field image from "Bienythiang, one of Akoka County’s six payams" shows the effects of drought on farmland and crops. The conditions are affecting agricultural production and adding pressure to communities already facing humanitarian needs.',
       'The Relief and Rehabilitation Commission (RRC) and community leaders are seeking interventions to respond to the situation and support affected households and communities.',
       'The reported impact highlights the importance of timely humanitarian and livelihood support as communities work to protect food security and recover from climate-related shocks.',
       'TAI is documenting community concerns and field realities to help keep attention on the needs identified by local leaders and the communities they represent.'
@@ -45,9 +45,9 @@ export const newsItems = [
     title: 'Community priorities for sustainable return and reintegration discussed in Akoka County',
     excerpt:
       'Community discussions in Akoka County identified practical priorities for return and reintegration, including water, livelihoods, justice, security, land concerns, food security and protection.',
-    image: akokaFocusImg,
-    alt: 'Community members taking part in a focused group discussion in Akoka County',
-    imageCaption: 'Focused group discussion · Akoka County',
+    image: akokaCommunityImg,
+    alt: 'Community and Community Protection Committee engagement in Akoka County',
+    imageCaption: 'Community and CPC engagement · Akoka County',
     body: [
       'In September 2025, TAI supported community discussions in Akoka County to understand the priorities and concerns affecting return and reintegration. The discussions brought community perspectives into focus and considered what would help returning and host communities rebuild safely and sustainably.',
       'Participants identified limited access to safe water, gaps in justice and rule-of-law infrastructure, limited livelihood opportunities for youth and women, security infrastructure needs, unresolved land concerns, food insecurity and protection risks as important issues requiring attention.',
@@ -59,7 +59,7 @@ export const newsItems = [
   },
   {
     slug: 'strengthening-community-protection-akoka',
-    date: '2025',
+    date: 'July 2025',
     isoDate: '2025-01-01',
     category: 'TAI field update',
     title: 'TAI forms and trains Community Protection Committees in Akoka County',
@@ -78,7 +78,7 @@ export const newsItems = [
   },
   {
     slug: 'local-capacity-return-reintegration-maiwut',
-    date: '2025',
+    date: 'April 2025',
     isoDate: '2025-01-01',
     category: 'TAI field update',
     title: 'Strengthening local capacity to support returnees in Maiwut County',
@@ -95,28 +95,10 @@ export const newsItems = [
     ],
     source: 'TAI field documentation, Maiwut County'
   },
-  {
-    slug: 'gender-sensitivity-protection-maiwut',
-    date: '2025',
-    isoDate: '2025-01-01',
-    category: 'Protection & GBV',
-    title: 'Gender sensitivity and protection remain central to return and reintegration work',
-    excerpt:
-      'Workshops in Maiwut brought gender sensitivity, GBV and protection into discussions with local actors supporting returnees and communities.',
-    image: maiwutEldersImg,
-    alt: 'Community representatives participating in a TAI activity in Maiwut County',
-    imageCaption: 'Community engagement · Maiwut County',
-    body: [
-      'Supporting return and reintegration requires attention to more than movement and basic assistance. Communities and local institutions also need the capacity to recognise protection risks and respond in ways that respect safety, dignity and inclusion.',
-      'As part of its work in Maiwut County, TAI conducted workshops on gender sensitivity, gender-based violence and protection. The sessions formed part of wider capacity strengthening with local actors involved in supporting returnees from Sudan and Ethiopia.',
-      'The approach recognises that women and girls can face distinct risks during displacement, return and recovery. Building shared understanding among local authorities, community leaders and other actors can help strengthen prevention, awareness and appropriate referral pathways.',
-      'TAI’s work continues to place community participation and local capacity at the centre of protection programming, while recognising the roles of formal authorities and specialised service providers.'
-    ],
-    source: 'TAI field documentation, Maiwut County'
-  },
+  
   {
     slug: 'community-protection-action-akoka',
-    date: '2025',
+    date: 'October 2025',
     isoDate: '2025-01-01',
     category: 'Community protection',
     title: 'Community protection structures help bring local concerns into action',
@@ -132,5 +114,25 @@ export const newsItems = [
       'Community ownership is therefore not only a principle of TAI’s work; it is a practical part of building protection systems that communities can understand, use and help sustain.'
     ],
     source: 'TAI field documentation, Akoka County'
-  }
+  },
+
+  {
+    slug: 'gender-sensitivity-protection-maiwut',
+    date: 'March 2024',
+    isoDate: '2024-03-05',
+    category: 'Protection & GBV',
+    title: 'Gender sensitivity and protection remain central to return and reintegration work',
+    excerpt:
+      'Workshops in Maiwut brought gender sensitivity, GBV and protection into discussions with local actors supporting returnees and communities.',
+    image: maiwutGenderSenstivityImg,
+    alt: 'Community representatives participating in a TAI activity in Maiwut County',
+    imageCaption: 'Community engagement · Maiwut County',
+    body: [
+      'Supporting return and reintegration requires attention to more than movement and basic assistance. Communities and local institutions also need the capacity to recognise protection risks and respond in ways that respect safety, dignity and inclusion.',
+      'As part of its work in Maiwut County, TAI conducted workshops on gender sensitivity, gender-based violence and protection. The sessions formed part of wider capacity strengthening with local actors involved in supporting returnees from Sudan and Ethiopia.',
+      'The approach recognises that women and girls can face distinct risks during displacement, return and recovery. Building shared understanding among local authorities, community leaders and other actors can help strengthen prevention, awareness and appropriate referral pathways.',
+      'TAI’s work continues to place community participation and local capacity at the centre of protection programming, while recognising the roles of formal authorities and specialised service providers.'
+    ],
+    source: 'TAI field documentation, Maiwut County'
+  },
 ]
