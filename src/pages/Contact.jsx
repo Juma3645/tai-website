@@ -24,7 +24,7 @@ export default function Contact() {
     const object = Object.fromEntries(formData)
     const json = JSON.stringify(object)
 
-    const response = await fetch(WEB3FORMS_ENDPOINT, {
+    const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -35,16 +35,16 @@ export default function Contact() {
 
     const result = await response.json()
 
-    console.log('Web3Forms response:', result)
+    console.log('WEB3FORMS RESULT:', result)
 
     if (!response.ok || !result.success) {
-      throw new Error(result.message || 'Submission failed')
+      throw new Error(result.message || `Request failed (${response.status})`)
     }
 
     form.reset()
     setStatus('sent')
   } catch (error) {
-    console.error('Web3Forms submission error:', error)
+    console.error('WEB3FORMS ERROR:', error)
     setStatus('error')
   }
 }
