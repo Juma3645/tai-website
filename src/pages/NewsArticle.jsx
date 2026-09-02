@@ -30,7 +30,7 @@ export default function NewsArticle() {
         </header>
         <div className="container article-layout">
           <div className="article-main">
-            <img className="article-image" src={item.image} alt={item.alt} />
+            <figure className="article-figure"><img className="article-image" src={item.image} alt={item.alt} /><figcaption>{item.imageCaption || item.alt}</figcaption></figure>
             {item.body.map((paragraph, index) => (
               <div key={paragraph}>
                 <p>{paragraph}</p>

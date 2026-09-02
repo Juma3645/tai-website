@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
 import usePageTitle from '../hooks/usePageTitle.js'
 import aboutImg from '../assets/images/community-gathering-women.jpg'
+import presenceImg from '../assets/News/Community Engagement.jpg'
 
 const values = [
   ['Gender equality', 'Centering women and girls in programmes, decisions and community life.'],
@@ -120,9 +121,9 @@ export default function About() {
       </Reveal>
 
       <Reveal as="section">
-        <div className="container locations-section">
-          <div><span className="eyebrow">Field presence</span><h2>Our field presence</h2></div>
-          <p>TAI’s main office is in Juba, with field coordination and programme experience in Akoka, Maiwut, Renk and Malakal.</p>
+        <div className="container presence-section">
+          <div className="presence-copy"><span className="eyebrow">Field presence</span><h2>Our field presence</h2><p>TAI’s main office is in Juba, with field coordination and programme experience in Akoka, Maiwut, Renk and Malakal.</p></div>
+          <figure className="presence-photo"><img src={presenceImg} alt="Community engagement activity in Akoka County" loading="lazy" /><figcaption>Community engagement · Akoka County</figcaption></figure>
         </div>
       </Reveal>
 

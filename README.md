@@ -26,16 +26,15 @@ Same workflow you used for ProtectionSphere.
 6. Open the local address it prints (usually `http://localhost:5173`) in your
    browser. Every page updates live as you edit files.
 
-## Before publishing — one thing to set up
+## Contact form
 
-Open `src/pages/Contact.jsx` and find this line near the top:
+The contact form uses Web3Forms. Create a local `.env` file from `.env.example` and set:
 
-```js
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+```
+VITE_WEB3FORMS_ACCESS_KEY=your-existing-key
 ```
 
-Replace `YOUR_FORM_ID` with your real Formspree form ID (sign up free at
-formspree.io with info@tafrica.org, create a form, copy the ID it gives you).
+For Vercel, add the same variable under Project Settings → Environment Variables. Do not commit `.env`.
 
 ## Building for deployment
 
@@ -58,6 +57,3 @@ recommendation — this one is here because you asked for the same process as
 ProtectionSphere.
 
 
-## Contact form
-
-The contact form uses Web3Forms. Keep the existing Web3Forms access key out of Git and configure it as `VITE_WEB3FORMS_ACCESS_KEY` in your local `.env` file and in Vercel Project Settings → Environment Variables.

@@ -1,28 +1,21 @@
-# TAI Website — latest implementation notes
+# TAI Website — pre-launch implementation notes
 
-## Included in this round
+## Final review changes in this package
 
-- Replaced the homepage wording that described TAI as a "South Sudanese NGO" with "women-led NGO".
-- Changed homepage and About field-location wording to **Our field presence**.
-- Clarified that TAI **formed and trained Community Protection Committees (CPCs)** in Akoka County.
-- Added a complete **News & Updates** route, homepage preview, article pages and source notes.
-- Added October 2025 flood-related editorial drafts using externally verifiable humanitarian reporting.
-- Added a verified named field voice from a public Radio Tamazuj report: Monyngok Abiel Arop, identified there as the local RRC coordinator in Pigi County.
-- Added restrained scroll-reveal and image hover motion, with reduced-motion support retained.
-- Added `robots.txt` and `sitemap.xml`.
-- Preserved the existing React/Vite/React Router/CSS architecture.
-- Contact form is configured for Web3Forms using `VITE_WEB3FORMS_ACCESS_KEY` rather than committing the access key to Git.
-- Added News to the main navigation and footer.
-- Made Home explicitly return to the top even when already on the Home route.
+- Corrected the homepage Protection & GBV image to an Akoka County image rather than a Maiwut image.
+- Kept the Maiwut programme imagery with Maiwut-specific activities: officials/community representatives and community engagement.
+- Clarified that in Akoka County, TAI **formed and trained Community Protection Committees (CPCs)**. CPCs are presented as community-level structures that help identify protection and land-related concerns, support awareness and connect people with appropriate referral/response mechanisms.
+- Added Maiwut capacity-strengthening content: training for Customs and Immigration officials, RRC representatives and traditional chiefs on handling/supporting returnees from Sudan and Ethiopia, plus workshops on gender sensitivity, GBV and protection.
+- Kept the shelter/family image associated with Maiwut context rather than presenting it as an Akoka flood image.
+- Changed the field section heading to **Our field presence**.
+- Removed the decorative border behind the hero image and reduced unnecessary image motion. The hero crop is wider so the photograph retains more of its original composition while preserving the good mobile treatment.
+- Added a restrained amount of hover/reveal motion; `prefers-reduced-motion` remains supported.
+- Added an editorial News & Updates area using TAI field material and community priorities from Akoka and Maiwut.
+- Removed the earlier Pigi flood/RRC story because it did not match TAI's Akoka field location. The requested Akoka flooding photograph with school children is **not present in this uploaded package**, so no unrelated photograph has been substituted or falsely labelled as a flood image. It can be added later without changing the news architecture.
+- Kept ProtectionSphere visible on the TAI homepage as a separate TAI-developed digital protection innovation, without turning the institutional site into a SaaS landing page.
+- Preserved the Web3Forms contact implementation.
+- Preserved React + Vite + React Router + CSS; no CMS, database or backend was introduced.
 
-## Web3Forms
+## Content standard
 
-Create a local `.env` file from `.env.example`:
-
-`VITE_WEB3FORMS_ACCESS_KEY=your-existing-key`
-
-For Vercel, add the same variable under Project Settings → Environment Variables for Production (and Preview if desired).
-
-## Editorial caution
-
-The flood stories are deliberately written as **humanitarian-context/editorial updates**, not as claims that TAI delivered flood assistance unless that activity is independently verified. The source note on each article identifies the public material used. Review the wording before treating any item as an official TAI activity report.
+The site distinguishes TAI field updates from broader humanitarian context. Names, quotations, project claims and precise dates should only be published when verified by TAI documentation or supplied/confirmed by TAI. No direct quotation has been invented for RRC coordinator Monylobi Kon Aduor.

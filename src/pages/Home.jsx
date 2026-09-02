@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
 import usePageTitle from '../hooks/usePageTitle.js'
 import heroImg from '../assets/images/gender-sensitivity-poc-akoka.jpg'
-import protectionImg from '../assets/images/maiwut-banner-notebooks.jpg'
+import protectionImg from '../assets/images/poc-akoka-banner-group.jpg'
 import livelihoodsImg from '../assets/images/livelihoods-cornfield.jpg'
 import shelterImg from '../assets/images/shelter-family-under-tree.jpg'
 import fieldImg from '../assets/images/community-gathering-wide.jpg'
 import womenImg from '../assets/images/akoka-women-poc-banner.jpg'
+import akokaNewsImg from '../assets/News/Community and CPC Engagement.jpg'
 
 const programmes = [
   {
@@ -14,7 +15,7 @@ const programmes = [
     title: 'Protection & GBV',
     text: 'Community-based protection, GBV prevention and response, referrals, gender-sensitive civic education, and local capacity strengthening.',
     image: protectionImg,
-    alt: 'Community elders with a protection banner in Maiwut County',
+    alt: 'Community members participating in protection work in Akoka County',
   },
   {
     number: '02',
@@ -174,12 +175,12 @@ export default function Home() {
           </div>
           <div className="news-home-grid">
             <article className="news-home-feature">
-              <img src={protectionImg} alt="Women participating in a TAI-supported protection activity in Akoka County" loading="lazy" />
-              <div><span className="news-label">TAI field update</span><h3>Strengthening community protection in Akoka County</h3><p>TAI formed and trained Community Protection Committees with strong women’s representation and a focus on locally led protection.</p><Link className="text-link" to="/news/strengthening-community-protection-in-akoka">Read the update <span aria-hidden="true">→</span></Link></div>
+              <img src={akokaNewsImg} alt="Community and Community Protection Committee engagement in Akoka County" loading="lazy" />
+              <div><span className="news-label">TAI field update · September 2025</span><h3>Community priorities for sustainable return and reintegration in Akoka</h3><p>Community discussions identified practical priorities around water, livelihoods, safety, land concerns, food security and protection.</p><Link className="text-link" to="/news/community-priorities-sustainable-return-akoka-county">Read the update <span aria-hidden="true">→</span></Link></div>
             </article>
             <div className="news-home-list">
-              <article><span className="news-label">Humanitarian context · 3 Oct 2025</span><h3>Flooding adds pressure to communities and humanitarian access</h3><Link className="text-link" to="/news/flooding-and-humanitarian-access-october-2025">Read update <span aria-hidden="true">→</span></Link></article>
-              <article><span className="news-label">Upper Nile update · 28 Oct 2025</span><h3>Upper Nile: coordination remains critical as flooding affects communities</h3><Link className="text-link" to="/news/upper-nile-flooding-needs-assessment-october-2025">Read update <span aria-hidden="true">→</span></Link></article>
+              <article><span className="news-label">Protection &amp; GBV · 2025</span><h3>Gender sensitivity and protection in Maiwut</h3><Link className="text-link" to="/news/gender-sensitivity-protection-maiwut">Read update <span aria-hidden="true">→</span></Link></article>
+              <article><span className="news-label">Return &amp; reintegration · 2025</span><h3>Building local capacity to support returnees in Maiwut</h3><Link className="text-link" to="/news/local-capacity-return-reintegration-maiwut">Read update <span aria-hidden="true">→</span></Link></article>
             </div>
           </div>
           <Link className="btn btn-secondary news-home-button" to="/news">See all news &amp; updates</Link>

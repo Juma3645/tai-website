@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
 import usePageTitle from '../hooks/usePageTitle.js'
 import bannerGroupImg from '../assets/images/poc-akoka-banner-group.jpg'
-import eldersImg from '../assets/images/community-gathering-wide.jpg'
+import eldersImg from '../assets/images/maiwut-banner-elders.jpg'
+import maiwutOfficialsImg from '../assets/images/maiwut-banner-officials.jpg'
 import womenBannerImg from '../assets/images/akoka-women-poc-banner.jpg'
 import cornfieldImg from '../assets/images/livelihoods-cornfield.jpg'
-import trainingImg from '../assets/images/training-session-flipchart.jpg'
+import trainingImg from '../assets/images/gender-sensitivity-poc-akoka.jpg'
 import familyImg from '../assets/images/shelter-family-under-tree.jpg'
 
 export default function Programs() {
@@ -35,13 +36,13 @@ export default function Programs() {
               <li>Gender-sensitive civic education and mobilisation</li>
               <li>Capacity strengthening with local and state authorities</li>
             </ul>
-            <p>Our field work has included support for safer environments and stronger local protection structures in Akoka and Maiwut counties.</p>
+            <p>In Akoka, TAI formed and trained Community Protection Committees and conducted gender-sensitivity and protection activities. In Maiwut, TAI strengthened the capacity of Customs and Immigration officials, RRC representatives and traditional chiefs supporting returnees from Sudan and Ethiopia.</p>
           </div>
         </div>
         <div className="container photo-row programme-gallery">
-          <figure className="field-photo"><img src={eldersImg} alt="Community elders engaged in Maiwut County" loading="lazy" /><figcaption>Maiwut County · community engagement</figcaption></figure>
-          <figure className="field-photo"><img src={womenBannerImg} alt="Women participating in protection programming in Akoka County" loading="lazy" /><figcaption>Akoka County · women’s participation</figcaption></figure>
-          <figure className="field-photo"><img src={trainingImg} alt="Community training session in Akoka County" loading="lazy" /><figcaption>Akoka County · local capacity strengthening</figcaption></figure>
+          <figure className="field-photo"><img src={maiwutOfficialsImg} alt="Local officials and community representatives during a TAI-supported activity in Maiwut County" loading="lazy" /><figcaption>Maiwut County · local capacity strengthening</figcaption></figure>
+          <figure className="field-photo"><img src={eldersImg} alt="Community representatives participating in a TAI activity in Maiwut County" loading="lazy" /><figcaption>Maiwut County · community engagement</figcaption></figure>
+          <figure className="field-photo"><img src={trainingImg} alt="Participants at a gender-sensitivity and protection activity in Akoka County" loading="lazy" /><figcaption>Akoka County · gender sensitivity and protection</figcaption></figure>
         </div>
       </Reveal>
 
@@ -66,7 +67,7 @@ export default function Programs() {
             <span className="tag">Active programme</span>
             <span className="eyebrow">03 · Humanitarian support</span>
             <h2>Shelter &amp; Non-Food Items (NFIs)</h2>
-            <p>TAI supports returnee and displaced families with shelter assistance and essential household items, alongside protection and livelihoods work.</p>
+            <p>TAI supports returnee and displaced families with shelter assistance and essential household items, alongside protection and livelihoods work. In Maiwut, field activities have included households living with significant shelter needs.</p>
             <p>Our aim is practical assistance that responds to immediate household needs while keeping safety, dignity and vulnerability in view.</p>
           </div>
         </div>
