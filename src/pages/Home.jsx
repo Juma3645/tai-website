@@ -7,8 +7,9 @@ import livelihoodsImg from '../assets/images/livelihoods-cornfield.jpg'
 import shelterImg from '../assets/images/shelter-family-under-tree.jpg'
 import fieldImg from '../assets/images/community-gathering-wide.jpg'
 import womenImg from '../assets/images/akoka-women-poc-banner.jpg'
-import akokaNewsImg from '../assets/News/Community and CPC Engagement.jpg'
+import { newsItems } from '../data/news.js'
 
+const latestNews = newsItems[0]
 const programmes = [
   {
     number: '01',
@@ -175,8 +176,8 @@ export default function Home() {
           </div>
           <div className="news-home-grid">
             <article className="news-home-feature">
-              <img src={akokaNewsImg} alt="Community and Community Protection Committee engagement in Akoka County" loading="lazy" />
-              <div><span className="news-label">TAI field update · September 2025</span><h3>Community priorities for sustainable return and reintegration in Akoka</h3><p>Community discussions identified practical priorities around water, livelihoods, safety, land concerns, food security and protection.</p><Link className="text-link" to="/news/community-priorities-sustainable-return-akoka-county">Read the update <span aria-hidden="true">→</span></Link></div>
+              <img src={latestNews.image} alt={latestNews.alt} loading="lazy" />
+              <div><span className="news-label">{latestNews.category} · {latestNews.date}</span><h3>{latestNews.title}</h3><p>{latestNews.excerpt}</p><Link className="text-link" to={`/news/${latestNews.slug}`}>Read the update <span aria-hidden="true">→</span></Link></div>
             </article>
             <div className="news-home-list">
               <article><span className="news-label">Protection &amp; GBV · 2025</span><h3>Gender sensitivity and protection in Maiwut</h3><Link className="text-link" to="/news/gender-sensitivity-protection-maiwut">Read update <span aria-hidden="true">→</span></Link></article>

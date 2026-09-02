@@ -1,3 +1,4 @@
+import droughtAkokaImg from '../assets/News/akoka-drought-impact.jpg'
 import akokaFocusImg from '../assets/News/Focused group discussion, Akoka HQ.jpg'
 import cpcAkokaImg from '../assets/News/CPC Representatives, Achony Payam, Akoka County.jpg'
 import akokaCpcImg from '../assets/News/CPC in Bienthiang, Akoka County.jpg'
@@ -6,6 +7,25 @@ import maiwutTrainingImg from '../assets/images/maiwut-banner-notebooks.jpg'
 import maiwutEldersImg from '../assets/images/maiwut-banner-elders.jpg'
 
 export const newsItems = [
+  {
+    slug: 'drought-impact-akoka-payam-urgent-interventions',
+    date: '2 September 2026',
+    isoDate: '2026-09-02',
+    category: 'Humanitarian update',
+    title: 'Drought impacts Akoka County as communities seek urgent interventions',
+    excerpt:
+      'Drought has affected crops in all of Akoka County’s six payams, while the RRC and community leaders are seeking urgent interventions to support affected communities.',
+    image: droughtAkokaImg,
+    alt: 'Drought-affected crops in all of Akoka County’s six payams',
+    imageCaption: 'Drought-affected farmland · Rom Payam, Akoka County',
+    body: [
+      'A recent field image from one of Akoka County’s six payams shows the effects of drought on farmland and crops. The conditions are affecting agricultural production and adding pressure to communities already facing humanitarian needs.',
+      'The Relief and Rehabilitation Commission (RRC) and community leaders are seeking interventions to respond to the situation and support affected households and communities.',
+      'The reported impact highlights the importance of timely humanitarian and livelihood support as communities work to protect food security and recover from climate-related shocks.',
+      'TAI is documenting community concerns and field realities to help keep attention on the needs identified by local leaders and the communities they represent.'
+    ],
+    source: 'TAI field update, Akoka County, 2 September 2026'
+  },
   {
     slug: 'community-priorities-sustainable-return-akoka-county',
     date: 'September 2025',

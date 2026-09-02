@@ -56,4 +56,5 @@ connections, the plain HTML/CSS/JS version I built first is still my
 recommendation — this one is here because you asked for the same process as
 ProtectionSphere.
 
-
+- Added 2 September 2026 Akoka drought field update and refreshed homepage latest-news feature.
+- Fixed the transparent footer logo treatment and added a keyboard-accessible skip link and 404 route.

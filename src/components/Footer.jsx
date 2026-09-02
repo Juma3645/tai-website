@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/images/tai-logo-wordmark.png'
+import logo from '../assets/images/tai-logo-footer.png'
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-main">
           <div className="footer-brand">
-            <img src={logo} alt="Thrive Africa Initiative" />
+            <img className="footer-logo" src={logo} alt="Thrive Africa Initiative" />
             <p>Working alongside women, returnees and vulnerable communities to strengthen protection, livelihoods and resilience in South Sudan.</p>
           </div>
           <div><h3>Explore</h3><Link to="/" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' })}>Home</Link><Link to="/about">About</Link><Link to="/programs">Programmes</Link><Link to="/news">News &amp; updates</Link><Link to="/contact">Contact</Link></div>
