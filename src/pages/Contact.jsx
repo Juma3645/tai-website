@@ -8,32 +8,46 @@ export default function Contact() {
   usePageTitle('Contact | Thrive Africa Initiative')
   const [status, setStatus] = useState('idle')
 
-  async function handleSubmit(event) {
-    event.preventDefault()
-    setStatus('sending')
-    const form = event.currentTarget
-    if (!WEB3FORMS_ACCESS_KEY) {
-      setStatus('error')
-      return
+ async function handleSubmit(event) {
+  event.preventDefault()
+  setStatus('sending')
+
+  const form = event.currentTarget
+
+  try {
+    const formData = new FormData(form)
+
+    formData.append('access_key', WEB3FORMS_ACCESS_KEY)
+    formData.append('subject', 'TAI website contact enquiry')
+    formData.append('from_name', 'TAI Website')
+
+    const object = Object.fromEntries(formData)
+    const json = JSON.stringify(object)
+
+    const response = await fetch(WEB3FORMS_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: json,
+    })
+
+    const result = await response.json()
+
+    console.log('Web3Forms response:', result)
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'Submission failed')
     }
-    try {
-      const formData = new FormData(form)
-      formData.append('access_key', WEB3FORMS_ACCESS_KEY)
-      formData.append('subject', 'TAI website contact enquiry')
-      formData.append('from_name', 'TAI Website')
-      const response = await fetch(WEB3FORMS_ENDPOINT, {
-        method: 'POST',
-        body: formData,
-        headers: { Accept: 'application/json' },
-      })
-      const result = await response.json()
-      if (!response.ok || !result.success) throw new Error('Submission failed')
-      form.reset()
-      setStatus('sent')
-    } catch {
-      setStatus('error')
-    }
+
+    form.reset()
+    setStatus('sent')
+  } catch (error) {
+    console.error('Web3Forms submission error:', error)
+    setStatus('error')
   }
+}
 
   return (
     <main>
