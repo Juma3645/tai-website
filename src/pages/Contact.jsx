@@ -2,8 +2,7 @@ import { useState } from 'react'
 import usePageTitle from '../hooks/usePageTitle.js'
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
-const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || ''
-
+const WEB3FORMS_ACCESS_KEY = '071d22b7-5356-49e4-8021-63f102cc238f'
 export default function Contact() {
   usePageTitle('Contact | Thrive Africa Initiative')
   const [status, setStatus] = useState('idle')
