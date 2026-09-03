@@ -13,8 +13,10 @@ const values = [
 ]
 
 export default function About() {
-  usePageTitle('About Thrive Africa Initiative | South Sudan')
-
+usePageTitle(
+  'About Thrive Africa Initiative | South Sudan',
+  '/about'
+)
   return (
     <main>
       <section className="page-hero page-hero-about">

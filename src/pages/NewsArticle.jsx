@@ -6,8 +6,12 @@ export default function NewsArticle() {
   const { slug } = useParams()
   const item = newsItems.find((entry) => entry.slug === slug)
 
-  usePageTitle(item ? `${item.title} | Thrive Africa Initiative` : 'News & Updates | Thrive Africa Initiative')
-
+usePageTitle(
+  item
+    ? `${item.title} | Thrive Africa Initiative`
+    : 'News & Updates | Thrive Africa Initiative',
+  item ? `/news/${item.slug}` : '/news'
+)
   if (!item) {
     return (
       <main>

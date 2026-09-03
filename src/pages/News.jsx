@@ -4,7 +4,10 @@ import usePageTitle from '../hooks/usePageTitle.js'
 import { newsItems } from '../data/news.js'
 
 export default function News() {
-  usePageTitle('News & Updates | Thrive Africa Initiative')
+  usePageTitle(
+  'News & Updates | Thrive Africa Initiative',
+  '/news'
+)
 
   return (
     <main>

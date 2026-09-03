@@ -1,13 +1,21 @@
 import { useEffect } from 'react'
 
-/** Sets document.title for the current route. No dependency needed —
- *  react-helmet etc. would be overkill for four static titles. */
-export default function usePageTitle(title) {
+const SITE_URL = 'https://www.tafrica.org'
+
+export default function usePageTitle(title, path = '/') {
   useEffect(() => {
-    const prev = document.title
     document.title = title
-    return () => {
-      document.title = prev
+
+    const canonicalUrl = `${SITE_URL}${path === '/' ? '/' : path}`
+
+    let canonical = document.querySelector('link[rel="canonical"]')
+
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
     }
-  }, [title])
+
+    canonical.setAttribute('href', canonicalUrl)
+  }, [title, path])
 }

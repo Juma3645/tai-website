@@ -9,8 +9,10 @@ import trainingImg from '../assets/images/gender-sensitivity-poc-akoka.jpg'
 import familyImg from '../assets/images/shelter-family-under-tree.jpg'
 
 export default function Programs() {
-  usePageTitle('Programmes | Thrive Africa Initiative')
-
+usePageTitle(
+  'Programmes | Thrive Africa Initiative',
+  '/programs'
+)
   return (
     <main>
       <section className="page-hero">

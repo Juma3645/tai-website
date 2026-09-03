@@ -4,7 +4,10 @@ import usePageTitle from '../hooks/usePageTitle.js'
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit'
 const WEB3FORMS_ACCESS_KEY = '071d22b7-5356-49e4-8021-63f102cc238f'
 export default function Contact() {
-  usePageTitle('Contact | Thrive Africa Initiative')
+usePageTitle(
+  'Contact | Thrive Africa Initiative',
+  '/contact'
+)
   const [status, setStatus] = useState('idle')
 
  async function handleSubmit(event) {
